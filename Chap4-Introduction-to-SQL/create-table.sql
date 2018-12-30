@@ -5,3 +5,9 @@ CREATE TABLE Student (
 	address	varchar(100),
 	phonenum	varchar(15)
 	);
+
+CREATE TABLE Course (
+	courseid	integer	primary key,
+	name	varchar(32)	not null,
+	starts	date
+	);
