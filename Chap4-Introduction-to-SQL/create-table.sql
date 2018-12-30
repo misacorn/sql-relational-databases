@@ -11,3 +11,14 @@ CREATE TABLE Course (
 	name	varchar(32)	not null,
 	starts	date
 	);
+
+CREATE TABLE Grade (
+	studentid 	integer,
+	courseid	integer,
+	grade	integer not null,
+	
+	PRIMARY KEY(studentid, courseid),
+	FOREIGN KEY(studentid) REFERENCES Student(studentid),
+	FOREIGN KEY(courseid) REFERENCES Course(courseid)
+	);
+	
