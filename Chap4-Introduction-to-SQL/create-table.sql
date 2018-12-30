@@ -12,6 +12,9 @@ CREATE TABLE Course (
 	starts	date
 	);
 
+ALTER TABLE Course 
+   ADD COLUMN Lecturer VARCHAR(32);
+
 CREATE TABLE Grade (
 	studentid 	integer,
 	courseid	integer,
