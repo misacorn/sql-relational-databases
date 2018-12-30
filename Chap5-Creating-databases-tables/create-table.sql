@@ -29,3 +29,4 @@ CREATE TABLE Grade (
 	FOREIGN KEY(courseid) REFERENCES Course(courseid)
 	);
 	
+DROP TABLE Grade CASCADE;
