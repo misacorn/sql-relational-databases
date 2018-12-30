@@ -15,6 +15,10 @@ CREATE TABLE Course (
 ALTER TABLE Course 
    ADD COLUMN Lecturer VARCHAR(32);
 
+ALTER TABLE Course 
+   DROP COLUMN Lecturer CASCADE;
+
+
 CREATE TABLE Grade (
 	studentid 	integer,
 	courseid	integer,
