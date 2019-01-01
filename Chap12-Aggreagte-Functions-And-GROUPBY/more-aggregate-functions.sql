@@ -1,0 +1,20 @@
+SELECT AuthorID, SUM(Pages)
+	FROM Book
+	GROUP BY AuthorID
+	ORDER BY AuthorID;
+
+SELECT AuthorID, AVG(Price), AVG(Pages)
+	FROM Book
+	GROUP BY AuthorID
+	ORDER BY AuthorID DESC;
+
+SELECT AuthorID, COUNT(*)
+	FROM Book
+	GROUP BY AuthorID
+	ORDER BY COUNT(*) DESC, AuthorID;
+
+SELECT AuthorID
+	FROM Book
+	GROUP BY AuthorID
+	HAVING SUM(Pages) > 200
+	ORDER BY AuthorID;
