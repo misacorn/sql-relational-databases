@@ -18,3 +18,9 @@ SELECT AuthorID
 	GROUP BY AuthorID
 	HAVING SUM(Pages) > 200
 	ORDER BY AuthorID;
+
+SELECT Author.Surname AS "Surname", Author.Forename AS "Forename", COUNT(Book.AuthorID) AS "Books written"
+	FROM Author
+	LEFT OUTER JOIN Book ON Author.AuthorID = Book.AuthorID
+	GROUP BY Author.Surname, Author.Forename
+	ORDER BY Author.Surname;
